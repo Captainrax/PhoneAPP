@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PhoneApp.App">
+    
+    <!-- Resources used by multiple pages in the application -->
+    <Application.Resources>
+
+        <Thickness x:Key="PageMargin">20</Thickness>
+
+        <!-- Colors -->
+        <Color x:Key="AppPrimaryColor">black</Color>
+        <Color x:Key="AppBackgroundColor">#29282b</Color>
+        <Color x:Key="PrimaryColor">green</Color>
+        <Color x:Key="SecondaryColor">#111322</Color>
+        <Color x:Key="TertiaryColor">Silver</Color>
+        <Color x:Key="TextColor">white</Color>
+
+        <!-- Implicit styles -->
+        <Style TargetType="ContentPage"
+               ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppBackgroundColor}" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontSize"
+                    Value="Medium" />
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppPrimaryColor}" />
+            <Setter Property="TextColor"
+                    Value="{StaticResource TextColor}" />
+            <Setter Property="CornerRadius"
+                    Value="5" />
+        </Style>
+        
+        <Style TargetType="Label">
+            <Setter Property="FontSize"
+                    Value="Small" />
+            <Setter Property="TextColor"
+                    Value="{StaticResource TextColor}" />
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource SecondaryColor}" />
+        </Style>
+
+    </Application.Resources>
+    
+</Application>

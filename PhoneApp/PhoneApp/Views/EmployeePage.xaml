@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PhoneApp.Views.EmployeePage">
+
+    <ContentPage.Resources>
+         <!--Implicit styles--> 
+        <Style TargetType="{x:Type Editor}">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource TextColor}" />
+        </Style>
+    </ContentPage.Resources>
+
+    <!-- Layout children vertically -->
+    <StackLayout Margin="20">
+        <StackLayout  Spacing="0">
+            <Label Text="Employee Name:" />
+            <Editor Text="{Binding Name}" />
+        </StackLayout>
+        <StackLayout  Spacing="0">
+            <Label Text="Description:" />
+            <Editor Text="{Binding Description}" />
+        </StackLayout>
+        <StackLayout  Spacing="0" Orientation="Horizontal">
+            <Label Text="Date Joined: " />
+            <Label Text="{Binding Date, StringFormat='{0:dd/MM/yyyy}'}"/>
+        </StackLayout>
+        
+        <!-- Layout children in two columns -->
+        <Grid ColumnDefinitions="*,*">
+            <Button Grid.Column="0"
+                    Text="Save"
+                    Clicked="OnSaveButtonClicked"/>
+            <Button Grid.Column="1"
+                    Text="Delete"
+                    Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
